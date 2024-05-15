@@ -1,9 +1,9 @@
 Pour compiler le CMAKE, se mettre à la racine puis:
 
-mkdir build \n
-cd build \n
-cmake .. \n
-make \n
+mkdir build  
+cd build  
+cmake ..  
+make  
 
 
 Systèmes Linux Ubuntu:
