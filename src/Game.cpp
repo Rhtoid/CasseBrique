@@ -273,7 +273,7 @@ void Game::createBonus(std::string brick_type, float x, float y){
         type = Bonus::Type::UpPaddleSize;
     }
     else if(brick_type == "b2"){
-        type = Bonus::Type::UpPaddleSize;
+        type = Bonus::Type::MultiBall;
     }
     else if(brick_type == "b3"){
         type = Bonus::Type::SlowBall;
@@ -284,9 +284,9 @@ void Game::createBonus(std::string brick_type, float x, float y){
     else if(brick_type == "m2"){
         type = Bonus::Type::FastBall;
     }
-    else if(brick_type == "m3"){
+    /*else if(brick_type == "m3"){
         type = Bonus::Type::MultiBall;
-    }
+    }*/
     SDL_Renderer* renderer = sdlWrapper->getRenderer();
     bonuses.insert(std::make_unique<Bonus>(renderer, type, x, y));
 }
