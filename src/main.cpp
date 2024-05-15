@@ -13,14 +13,14 @@ int frameTime;
 
 
 int main(int argc, char* argv[]) {
-    if(argc == 1 || argc > 3){
-        SDL_Log("Usage: %s <image_name> <[num_level]>", argv[0]);
+    if(argc == 1 || argc > 2){
+        SDL_Log("Usage: %s <[num_level]>", argv[0]);
         return -1;
     }
-    std::string image_name = argv[1];
+    std::string image_name = "image.png";
     int num_level;
-    if(argc == 3){
-        num_level = atoi(argv[2]);
+    if(argc == 2){
+        num_level = atoi(argv[1]);
     }else{
         num_level = 1;
     }    
