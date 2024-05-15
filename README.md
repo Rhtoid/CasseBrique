@@ -9,6 +9,10 @@ cd build
 cmake ..  
 make  
 
+Pour lancer:
+
+./CasseBrique [<numlevel>] 
+avec numlevel entre 0 et 9
 
 Systèmes Linux Ubuntu:  
     sudo apt-get update  
