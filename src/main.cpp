@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     if(argc == 2){
         num_level = atoi(argv[1]);
     }else{
-        num_level = 1;
+        num_level = 0;
     }    
     SDLWrapper sdlWrapper; // Encapsulate SDL functionalities
     if (!sdlWrapper.init(image_name)) {
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 
    
     Game game(&sdlWrapper); // Game instance
-    while(num_level<=10){
+    while(num_level<=9){
         printf("Commencement du niveau #%d#\n",num_level);
         if (!game.init(num_level)) {
             SDL_Log("Failed to initialize game.");
