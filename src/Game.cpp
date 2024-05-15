@@ -265,7 +265,7 @@ void Game::effects(Bonus::Type type){
 }
 
 void Game::createBonus(std::string brick_type, float x, float y){
-    Bonus::Type type;
+    Bonus::Type type = Bonus::Type::Nothing;
     if(rand()%100 < 60){
         return;
     }
@@ -287,8 +287,10 @@ void Game::createBonus(std::string brick_type, float x, float y){
     /*else if(brick_type == "m3"){
         type = Bonus::Type::MultiBall;
     }*/
-    SDL_Renderer* renderer = sdlWrapper->getRenderer();
-    bonuses.insert(std::make_unique<Bonus>(renderer, type, x, y));
+    if(type != Bonus::Type::Nothing){
+        SDL_Renderer* renderer = sdlWrapper->getRenderer();
+        bonuses.insert(std::make_unique<Bonus>(renderer, type, x, y));
+    }
 }
 
 const std::vector<std::unique_ptr<Brick>>& Game::get_bricks() const {
